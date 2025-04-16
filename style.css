@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background-color: #111;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+.intro, .services, .contact {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+}
+
+.intro h2, .services h2, .contact h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #e0c07c;
+}
+
+.intro p, .contact p, .services ul {
+    font-size: 1.1em;
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #e0c07c;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #d4b15a;
+}
+
+.services ul {
+    list-style: none;
+    padding-top: 10px;
+}
+
+.services li {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
