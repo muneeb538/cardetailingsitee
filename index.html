@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Reset & General Styles */
         * {
@@ -77,6 +80,7 @@
         /* Banner Section */
         #banner {
             background-image: url('https://images.unsplash.com/photo-1552519507-6f0de7982121?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            /* Placeholder Lamborghini image */
             background-size: cover;
             background-position: center;
             height: 600px;
@@ -221,6 +225,24 @@
             margin-bottom: 20px;
         }
 
+        .why-choose-us-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .why-choose-us-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .why-choose-us-list li::before {
+            content: '\2713';
+            /* Checkmark */
+            color: #ff0000;
+            margin-right: 10px;
+        }
+
         /* Testimonials Section */
         #testimonials {
             padding: 80px 0;
@@ -238,6 +260,11 @@
             padding: 20px;
             border-radius: 8px;
             position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .testimonial:hover {
+            background-color: #222;
         }
 
         .testimonial::before {
@@ -278,6 +305,7 @@
             overflow: hidden;
             border-radius: 8px;
             position: relative;
+            transition: transform 0.3s ease;
         }
 
         .before-after-item img {
@@ -365,13 +393,15 @@
         }
 
         /* Animations */
-        @keyframes fadeIn {
+        @keyframes welcomeAnimation {
             from {
                 opacity: 0;
+                transform: scale(0.8);
             }
 
             to {
                 opacity: 1;
+                transform: scale(1);
             }
         }
 
@@ -395,9 +425,6 @@
             // Simple Animation on Banner Load (already in CSS)
         });
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -446,10 +473,15 @@
         <div class="container">
             <h2 class="section-title">Why Choose Us</h2>
             <div class="why-choose-us-content">
-                <p>At Muneeb's Car Detailing, we provide unmatched attention to detail, using only premium quality products to
-                    ensure a guaranteed showroom finish. Our experienced and certified technicians are dedicated to customer
-                    satisfaction, treating your vehicle with the utmost care. Choose us for a detailing experience that goes
-                    beyond the surface.</p>
+                <p>At Muneeb's Car Detailing, we are committed to providing an exceptional car care experience. Here's why you
+                    should choose us:</p>
+                <ul class="why-choose-us-list">
+                    <li>Unmatched attention to detail</li>
+                    <li>Premium quality products used</li>
+                    <li>Experienced and certified technicians</li>
+                    <li>Guaranteed showroom finish</li>
+                    <li>100% customer satisfaction is our priority</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -459,20 +491,22 @@
             <h2 class="section-title">Testimonials</h2>
             <div class="testimonials-grid">
                 <div class="testimonial">
-                    <p>“Absolutely fantastic service! My car looks brand new. Highly recommend Muneeb's Detailing.”</p>
-                    <p class="testimonial-author">- John Doe</p>
+                    <p>“Absolutely thrilled with the service! My car looks like it just rolled off the lot. Muneeb's Detailing
+                        exceeded my expectations.”</p>
+                    <p class="testimonial-author">- Robert Johnson</p>
                 </div>
                 <div class="testimonial">
-                    <p>“Professional, efficient, and the results are stunning. I'll definitely be back!”</p>
-                    <p class="testimonial-author">- Jane Smith</p>
+                    <p>“Professional and meticulous work. The interior detailing was superb. Highly recommend their services.”
+                    </p>
+                    <p class="testimonial-author">- Sarah Williams</p>
                 </div>
                 <div class="testimonial">
-                    <p>“Excellent work! My SUV has never looked better. Great attention to detail.”</p>
-                    <p class="testimonial-author">- Michael Brown</p>
+                    <p>“Excellent results! My SUV has never been cleaner. The team at Muneeb's is top-notch.”</p>
+                    <p class="testimonial-author">- David Lee</p>
                 </div>
                 <div class="testimonial">
-                    <p>“The interior detailing was superb. Worth every penny. Thank you!”</p>
-                    <p class="testimonial-author">- Emily Wilson</p>
+                    <p>“The attention to detail is impressive. They truly care about their customers and their vehicles.”</p>
+                    <p class="testimonial-author">- Maria Garcia</p>
                 </div>
             </div>
         </div>
@@ -481,27 +515,4 @@
     <section id="before-after">
         <div class="container">
             <h2 class="section-title">Before & After</h2>
-            <div class="before-after-grid">
-                <div class="before-after-item">
-                    <img src="https://placehold.co/400x300/1a1a1a/ffffff?text=Before" alt="Before Detailing">
-                </div>
-                <div class="before-after-item">
-                    <img src="https://placehold.co/400x300/1a1a1a/ffffff?text=After" alt="After Detailing">
-                </div>
-                <div class="before-after-item">
-                    <img src="https://placehold.co/400x300/1a1a1a/ffffff?text=Before" alt="Before Detailing">
-                </div>
-                <div class="before-after-item">
-                    <img src="https://placehold.co/400x300/1a1a1a/ffffff?text=After" alt="After Detailing">
-                </div>
-                </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-details">
-
-               </email>stevemicheal5412@gmail.com
-                
+            <div class="before-
