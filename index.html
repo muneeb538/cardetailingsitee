@@ -1,550 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muneeb's Car Detailing</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #000;
-            color: white;
-        }
-        .banner {
-            width: 100%;
-            height: 100vh;
-            background-image: url('https://cdn.pixabay.com/photo/2016/03/27/21/16/lamborghini-1280568_1280.jpg');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        .banner-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .banner-text h1 {
-            font-size: 3rem;
-            margin: 0;
-            color: red;
-   
-    <style>
-        /* Reset & General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #fff;
-            background-color: #111;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: rgba(0, 0, 0, 0.8);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #fff;
-        }
-
-        .logo span {
-            color: #ff0000;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ff0000;
-        }
-
-        /* Banner Section */
-        #banner {
-            background-image: url('https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini_sian/product/SIAN_FKP37/gallery/Sian_FKP37_gallery_01.jpg'); /* ADDED LAMBORGHINI SIAN IMAGE URL */
-            background-size: cover;
-            background-position: center;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        #banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .banner-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .banner-title {
-            font-size: 3em;
-            font-weight: 700;
-            margin-bottom: 20px;
-            opacity: 0;
-            transform: scale(0.8);
-            animation: welcomeAnimation 1s forwards 0.5s;
-        }
-
-        .banner-subtitle {
-            font-size: 1.5em;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: subtitleAnimation 1s forwards 1s;
-        }
-
-        @keyframes welcomeAnimation {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes subtitleAnimation {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Services Section */
-        #services {
-            padding: 80px 0;
-            background-color: #000;
-        }
-
-        .section-title {
-            font-size: 2.5em;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 50px;
-            color: #fff;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background-color: #ff0000;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .service-item {
-            background-color: #1a1a1a;
-            padding: 30px;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        .service-icon {
-            font-size: 2em;
-            color: #ff0000;
-            margin-bottom: 20px;
-        }
-
-        .service-title {
-            font-size: 1.5em;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-
-        .service-price {
-            font-size: 1.2em;
-            color: #aaa;
-        }
-
-        /* Why Choose Us Section */
-        #why-choose-us {
-            padding: 80px 0;
-            background-color: #111;
-        }
-
-        .why-choose-us-content {
-            text-align: center;
-        }
-
-        .why-choose-us-content p {
-            font-size: 1.1em;
-            color: #ccc;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .why-choose-us-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .why-choose-us-list li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .why-choose-us-list li::before {
-            content: '\2713';
-            /* Checkmark */
-            color: #ff0000;
-            margin-right: 10px;
-        }
-
-        /* Testimonials Section */
-        #testimonials {
-            padding: 80px 0;
-            background-color: #000;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial {
-            background-color: #1a1a1a;
-            padding: 20px;
-            border-radius: 8px;
-            position: relative;
-            transition: background-color 0.3s ease;
-        }
-
-        .testimonial:hover {
-            background-color: #222;
-        }
-
-        .testimonial::before {
-            content: '"';
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 2em;
-            color: #ff0000;
-            opacity: 0.5;
-        }
-
-        .testimonial p {
-            font-style: italic;
-            color: #ccc;
-            margin-bottom: 10px;
-        }
-
-        .testimonial-author {
-            font-weight: 500;
-            color: #fff;
-            text-align: right;
-        }
-
-        /* Contact Us Section */
-        #contact {
-            padding: 80px 0;
-            background-color: #000;
-        }
-
-        .contact-details {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .contact-details p {
-            margin-bottom: 10px;
-            color: #ccc;
-        }
-
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 500;
-            margin-bottom: 5px;
-            color: #fff;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background-color: #1a1a1a;
-            color: #fff;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            background-color: #222;
-        }
-
-        button[type="submit"] {
-            background-color: #ff0000;
-            color: #fff;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #cc0000;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.9em;
-            color: #888;
-        }
-
-        /* Animations */
-        @keyframes welcomeAnimation {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-            }
-
-            .banner-title {
-                font-size: 2em;
-            }
-
-            .banner-subtitle {
-                font-size: 1.2em;
-            }
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Simple Animation on Banner Load (already in CSS)
-        });
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">Muneeb's <span>Detailing</span></div>
-            <ul>
-                <li><a href="#banner">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#why-choose-us">Why Choose Us</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Muneeb's Car Detailing</h1>
+            <p>Luxury Car Care - Where Details Matter</p>
+            <a href="#services" class="btn">View Services</a>
+        </div>
     </header>
 
-    <section id="banner">
-        <div class="banner-content">
-            <h1 class="banner-title">Welcome to Muneeb's Car Detailing</h1>
-            <p class="banner-subtitle">Experience the ultimate shine and protection for your vehicle.</p>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Interior Detailing</h3>
+            <p>$160 for Sedan Cars</p>
+            <p>$180 for SUV Cars</p>
+        </div>
+        <div class="service-item">
+            <h3>Interior and Exterior Detailing</h3>
+            <p>$200 for Sedan Cars</p>
+            <p>$240 for SUV Cars</p>
         </div>
     </section>
 
-    <section id="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <i class="fas fa-car service-icon"></i>
-                    <h3 class="service-title">Interior Detailing</h3>
-                    <p class="service-price">Sedan: $160</p>
-                    <p class="service-price">SUV: $180</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-car-wash service-icon"></i>
-                    <h3 class="service-title">Interior & Exterior Detailing</h3>
-                    <p class="service-price">Sedan: $200</p>
-                    <p class="service-price">SUV: $240</p>
-                </div>
-            </div>
-        </div>
+    <section class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <p>At Muneeb's Car Detailing, we offer unmatched attention to detail, premium quality products, experienced and certified technicians, guaranteed showroom finish, and full customer satisfaction every time!</p>
     </section>
 
-    <section id="why-choose-us">
-        <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
-            <div class="why-choose-us-content">
-                <p>At Muneeb's Car Detailing, we are committed to providing an exceptional car care experience. Here's why you
-                    should choose us:</p>
-                <ul class="why-choose-us-list">
-                    <li>Unmatched attention to detail</li>
-                    <li>Premium quality products used</li>
-                    <li>Experienced and certified technicians</li>
-                    <li>Guaranteed showroom finish</li>
-                    <li>100% customer satisfaction is our priority</li>
-                </ul>
-            </div>
-        </div>
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-item">"My car looks brand new! Amazing service!" — John D.</div>
+        <div class="testimonial-item">"Professional and reliable. Highly recommended." — Sarah K.</div>
+        <div class="testimonial-item">"They brought my car back to life!" — Mike L.</div>
+        <div class="testimonial-item">"Superb detailing, will book again." — Emily R.</div>
     </section>
 
-    <section id="testimonials">
-        <div class="container">
-            <h2 class="section-title">Testimonials</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p>“Absolutely thrilled with the service! My car looks like it just rolled off the lot. Muneeb's Detailing
-                        exceeded my expectations.”</p>
-                    <p class="testimonial-author">- Robert Johnson</p>
-                </div>
-                <div class="testimonial">
-                    <p>“Professional and meticulous work. The interior detailing was superb. Highly recommend their services.”
-                    </p>
-                    <p class="testimonial-author">- Sarah Williams</p>
-                </div>
-                <div class="testimonial">
-                    <p>“Excellent results! My SUV has never been cleaner. The team at Muneeb's is top-notch.”</p>
-                    <p class="testimonial-author">- David Lee</p>
-                </div>
-                <div class="testimonial">
-                    <p>“The attention to detail is impressive. They truly care about their customers and their vehicles.”</p>
-                    <p class="testimonial-author">- Maria Garcia</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: +1 657-799-0385</p>
+        <p>Email: stevemicheal5412@gmail.com</p>
 
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <div class="contact-details">
-                <p><i class="fas fa-phone"></i> Phone: +1 657-799-0385</p>
-                <p><i class="fas fa-envelope"></i> Email: stevemicheal5412@gmail.com</p>
-            </div>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
     <footer>
-        <div class="container">
-            &copy; 2023 Muneeb's Car Detailing. All rights reserved.
-        </div>
+        <p>© 2025 Muneeb's Car Detailing. All rights reserved.</p>
     </footer>
 
-    <script>
-        // JavaScript for potential enhancements can go here
-    </script>
 </body>
-
 </html>
