@@ -1,77 +1,68 @@
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', sans-serif;
-    color: #fff;
-    background-color: #111;
-    line-height: 1.6;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #0c0c0c;
+    color: #f5f5f5;
 }
 
 header {
-    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    background: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    height: 100vh;
     text-align: center;
-    padding: 60px 20px;
+    padding-top: 150px;
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 48px;
+    color: #ffd700;
     margin-bottom: 10px;
 }
 
 header p {
-    font-size: 1.2em;
-    color: #ccc;
-}
-
-.intro, .services, .contact {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #1c1c1c;
-}
-
-.intro h2, .services h2, .contact h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-    color: #e0c07c;
-}
-
-.intro p, .contact p, .services ul {
-    font-size: 1.1em;
-    color: #ccc;
+    font-size: 24px;
+    color: #ffffff;
 }
 
 .btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #e0c07c;
+    padding: 10px 30px;
+    background: #ffd700;
     color: #000;
     text-decoration: none;
-    border-radius: 30px;
-    transition: background 0.3s ease;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 .btn:hover {
-    background-color: #d4b15a;
+    background: #e6c200;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .services ul {
     list-style: none;
-    padding-top: 10px;
+    padding: 0;
 }
 
 .services li {
     margin: 10px 0;
+    font-size: 18px;
+}
+
+.contact {
+    background: #1a1a1a;
 }
 
 footer {
-    background-color: #000;
     text-align: center;
     padding: 20px;
-    font-size: 0.9em;
-    color: #666;
+    background: #000;
+    font-size: 14px;
+    margin-top: 40px;
 }
