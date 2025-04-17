@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #eee;
+  scroll-behavior: smooth;
+}
+
+.entrance-animation {
+  background: black;
+  color: red;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: openDoor 3s forwards;
+}
+
+@keyframes openDoor {
+  0% { transform: scaleX(1); }
+  100% { transform: scaleX(0); display: none; }
+}
+
+header {
+  background: #222;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  color: red;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+.services, .why-choose-us, .testimonials, .before-after, .contact-us {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-item {
+  background: #222;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.testimonial-item {
+  background: #222;
+  margin: 10px;
+  padding: 15px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img, .gallery video {
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form input, .contact-form textarea {
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: darkred;
+}
